@@ -1,13 +1,18 @@
 <div class="menu-link" [class.open]="isOpen">
-    <button mat-button (click)="link.submenu ? toggleSubmenu() : onLinkClick()">
-      {{ link.label }}
-    </button>
-    @if (link.submenu) {
-      <div class="submenu">
-        @for (subitem of link.submenu; track subitem.value) {
-          <app-menu-link [link]="subitem" (linkClicked)="onSubLinkClicked(subitem.value)"></app-menu-link>
-        }
-      </div>
-    }
-  </div>
-  
+  <button mat-button (click)="toggleSubmenu()">
+    {{ link.label }}
+  </button>
+  @if (link.submenu) {
+    <div
+      class="submenu"
+      [@submenu]="isOpen ? 'open' : 'closed'"
+      (click)="$event.stopPropagation()"
+    >
+      @for (subitem of link.submenu; track subitem.value) {
+        <button mat-button (click)="onSubLinkClicked(subitem.value)">
+          {{ subitem.label }}
+        </button>
+      }
+    </div>
+  }
+</div>

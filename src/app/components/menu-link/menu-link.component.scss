@@ -1,23 +1,29 @@
 .menu-link {
-    position: relative; /* Potrzebne do pozycjonowania submenu */
+  position: relative;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 15px;
   }
-  
+
   .submenu {
-    position: absolute;
-    top: 100%; /* Submenu pojawia się poniżej przycisku */
-    left: 0;
-    display: none; /* Ukryte domyślnie */
+    display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+    margin-top: 5px;
+    background: white; /* Usuń ramki */
+    padding: 5px 0;
+    z-index: 1000;
+    position: relative;
+    box-shadow: none; /* Bez cieni */
   }
-  
-  .menu-link.open .submenu {
-    display: flex; /* Pokazuje submenu, gdy rodzic ma klasę .open */
+
+  .menu-separator {
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+    display: inline-block;
   }
-  
+}

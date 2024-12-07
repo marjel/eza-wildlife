@@ -1,5 +1,6 @@
 <div class="menu-container">
-    @for (item of menuData; track trackByFn(item)) {
+    @for (item of menuData; track item.value) {
     <app-menu-link [link]="item" (linkClicked)="onLinkClicked($event)"></app-menu-link>
+    <div class="menu-separator" *ngIf="menuData.indexOf(item) < menuData.length - 1"></div>
     }
 </div>

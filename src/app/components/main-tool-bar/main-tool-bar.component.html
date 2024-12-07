@@ -1,6 +1,7 @@
 <nav class="toolbar bg-gray-200 p-4 flex justify-between">
     @if(structure().length) {
+    <div class="menu-container">
         <app-menu [menuData]="structure()" (linkClicked)="onLinkClicked($event)" />
+    </div>
     }
-    <div>Tools</div>
 </nav>

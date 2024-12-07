@@ -6,6 +6,11 @@
     padding: 0.5rem;
     background-color: #f5f5f5; /* Jasne tło */
     border-radius: 8px; /* Zaokrąglone rogi */
+    .menu-separator {
+      width: 1px;
+      background-color: #ddd;
+      height: 1.5rem;
+    }
   }
   
   .menu-link {
