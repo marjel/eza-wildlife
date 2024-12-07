@@ -1,0 +1,44 @@
+[
+    {
+      "label": "Artykuły",
+      "value": "articles"
+    },
+    {
+      "label": "Bio",
+      "value": "bio"
+    },
+    {
+      "label": "Azyl",
+      "value": "asylum",
+      "submenu": [
+        { "label": "Rebelia GOGH", "value": "asylum/rebellion" },
+        { "label": "Wsparcie", "value": "asylum/support" },
+        { "label": "Wolontariat", "value": "asylum/volunteering" },
+        { "label": "Podopieczni", "value": "asylum/wards" },
+        { "label": "Wirtualne adopcje", "value": "asylum/adoptions" }
+      ]
+    },
+    {
+      "label": "Działalność",
+      "value": "activities",
+      "submenu": [
+        { "label": "Wykłady", "value": "activities/lectures" },
+        { "label": "Szkolenia", "value": "activities/trainings" },
+        { "label": "Konsultacje", "value": "activities/consulting" },
+        { "label": "Interwencje", "value": "activities/interventions" }
+      ]
+    },
+    {
+      "label": "Media Społecznościowe",
+      "value": "social-media"
+    },
+    {
+      "label": "Patroni",
+      "value": "patrons"
+    },
+    {
+      "label": "Kontakt",
+      "value": "contact"
+    }
+  ]
+  

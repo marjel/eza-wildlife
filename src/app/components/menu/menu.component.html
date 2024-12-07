@@ -1,0 +1,5 @@
+<div class="menu-container">
+    @for (item of menuData; track trackByFn(item)) {
+    <app-menu-link [link]="item" (linkClicked)="onLinkClicked($event)"></app-menu-link>
+    }
+</div>

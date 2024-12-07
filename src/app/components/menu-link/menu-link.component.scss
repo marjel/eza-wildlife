@@ -1,0 +1,23 @@
+.menu-link {
+    position: relative; /* Potrzebne do pozycjonowania submenu */
+  }
+  
+  .submenu {
+    position: absolute;
+    top: 100%; /* Submenu pojawia się poniżej przycisku */
+    left: 0;
+    display: none; /* Ukryte domyślnie */
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .menu-link.open .submenu {
+    display: flex; /* Pokazuje submenu, gdy rodzic ma klasę .open */
+  }
+  

@@ -1,0 +1,13 @@
+<div class="menu-link" [class.open]="isOpen">
+    <button mat-button (click)="link.submenu ? toggleSubmenu() : onLinkClick()">
+      {{ link.label }}
+    </button>
+    @if (link.submenu) {
+      <div class="submenu">
+        @for (subitem of link.submenu; track subitem.value) {
+          <app-menu-link [link]="subitem" (linkClicked)="onSubLinkClicked(subitem.value)"></app-menu-link>
+        }
+      </div>
+    }
+  </div>
+  

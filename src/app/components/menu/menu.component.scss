@@ -1,0 +1,36 @@
+.menu-container {
+    display: flex; /* Poziome menu */
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem; /* Odstępy między elementami */
+    padding: 0.5rem;
+    background-color: #f5f5f5; /* Jasne tło */
+    border-radius: 8px; /* Zaokrąglone rogi */
+  }
+  
+  .menu-link {
+    position: relative; /* Aby pozycjonować submenu */
+  }
+  
+  button.mat-button {
+    background-color: #007bff; /* Kolor tła */
+    color: white; /* Kolor tekstu */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px; /* Zaokrąglone przyciski */
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Animacja zmiany koloru */
+  }
+  
+  button.mat-button:hover {
+    background-color: #0056b3; /* Kolor tła po najechaniu */
+  }
+
+  @media (max-width: 768px) {
+    .menu-container {
+      flex-direction: column; /* Menu pionowe na małych ekranach */
+      align-items: stretch;
+    }
+  }
+  
+  
