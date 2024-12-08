@@ -12,8 +12,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./menu-link.component.scss'],
   animations: [
     trigger('submenu', [
-      state('closed', style({ height: '0', overflow: 'hidden', opacity: 0 })),
-      state('open', style({ height: '*', opacity: 1 })),
+      state('closed', style({ height: '0', overflow: 'hidden' })),
+      state('open', style({ height: '*' })),
       transition('closed <=> open', animate('300ms ease-in-out')),
     ]),
   ],

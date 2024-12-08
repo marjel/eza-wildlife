@@ -25,7 +25,8 @@
         { "label": "Wykłady", "value": "activities/lectures" },
         { "label": "Szkolenia", "value": "activities/trainings" },
         { "label": "Konsultacje", "value": "activities/consulting" },
-        { "label": "Interwencje", "value": "activities/interventions" }
+        { "label": "Interwencje", "value": "activities/interventions" },
+        { "label": "Dla organizacji", "value": "activities/organizations" }
       ]
     },
     {
