@@ -1,6 +1,13 @@
 <div class="menu-link" [class.open]="isOpen">
-  <button mat-button (click)="toggleSubmenu()">
+  <button class="main-button" mat-button (click)="toggleSubmenu()">
     {{ link.label }}
+    @if (link.submenu) {
+      <i class="fas" 
+      [ngClass]="{
+        'fa-plus': !isOpen,
+        'fa-minus': isOpen
+      }"></i>
+    }
   </button>
   @if (link.submenu) {
     <div
