@@ -9,7 +9,7 @@
       (click)="$event.stopPropagation()"
     >
       @for (subitem of link.submenu; track subitem.value) {
-        <button mat-button (click)="onSubLinkClicked(subitem.value)">
+        <button class="submenu-button" mat-button (click)="onSubLinkClicked(subitem.value)">
           {{ subitem.label }}
         </button>
       }

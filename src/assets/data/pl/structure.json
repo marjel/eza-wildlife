@@ -8,7 +8,7 @@
       "value": "bio"
     },
     {
-      "label": "Azyl",
+      "label": "Azyl OIGO",
       "value": "asylum",
       "submenu": [
         { "label": "Rebelia GOGH", "value": "asylum/rebellion" },
@@ -30,11 +30,11 @@
     },
     {
       "label": "Media Społecznościowe",
-      "value": "social-media"
-    },
-    {
-      "label": "Patroni",
-      "value": "patrons"
+      "value": "social-media",
+      "submenu": [
+        { "label": "Patroni", "value": "social-media/patrons" },
+        { "label": "Gdzie jesteśmy", "value": "social-media/media" }
+      ]
     },
     {
       "label": "Kontakt",

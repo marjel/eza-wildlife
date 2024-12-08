@@ -1,25 +1,34 @@
 .menu-link {
   position: relative;
+  display: grid;
 
-  button {
+  /*button {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 16px;
     padding: 10px 15px;
-  }
+  }*/
 
   .submenu {
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
-    background: white; /* Usuń ramki */
+    align-items: flex-start; /* Wyrównanie tekstu do lewej */
+    background: white;
     padding: 5px 0;
+    box-shadow: none;
     z-index: 1000;
     position: relative;
-    box-shadow: none; /* Bez cieni */
-  }
+}
 
+.submenu-button {
+    text-align: left; /* Tekst wyrównany do lewej */
+    width: auto; /* Dopasowanie szerokości do zawartości */
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    outline: none;
+}
   .menu-separator {
     width: 1px;
     background-color: #ccc;
