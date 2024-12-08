@@ -4,7 +4,6 @@
   justify-content: space-between;
   background-color: #f8f8f8;
   padding: 1px 1px;
-  transition: height 0.3s ease-in-out; /* Animacja zmiany wysokości */
   overflow: hidden; /* Zapobiega obcinaniu rozwijanego submenu */
 }
 
@@ -12,4 +11,14 @@
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+@media (orientation: landscape) {
+  .menu-container {
+      flex-direction: row; /* W orientacji poziomej układ horyzontalny */
+  }
+
+  .menu-container app-menu-link {
+      flex: 1; /* Każdy przycisk zajmuje równą szerokość */
+  }
 }

@@ -11,6 +11,7 @@
       background-color: #ddd;
       height: 2.3rem;
     }
+    
   }
   
   .menu-link {
@@ -21,6 +22,9 @@
     .menu-container {
       flex-direction: column; /* Menu pionowe na małych ekranach */
       align-items: stretch;
+    }
+    .menu-separator {
+      display: none;
     }
   }
   
