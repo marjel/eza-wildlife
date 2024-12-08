@@ -4,7 +4,7 @@
       "value": "articles"
     },
     {
-      "label": "Bio",
+      "label": "O mnie",
       "value": "bio"
     },
     {
@@ -30,11 +30,12 @@
       ]
     },
     {
-      "label": "Media Społecznościowe",
+      "label": "Media",
       "value": "social-media",
       "submenu": [
         { "label": "Patroni", "value": "social-media/patrons" },
-        { "label": "Gdzie jesteśmy", "value": "social-media/media" }
+        { "label": "Gdzie jesteśmy", "value": "social-media/media" },
+        { "label": "Galeria", "value": "social-media/gallery" }
       ]
     },
     {

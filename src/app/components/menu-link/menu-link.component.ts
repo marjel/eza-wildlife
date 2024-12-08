@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter, HostListener, ElementRef } from
 import { MenuLink } from '../../model/menu-link.model';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { trigger, state, style, transition, animate, group } from '@angular/animations';
 
 @Component({
   selector: 'app-menu-link',
@@ -12,9 +12,28 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./menu-link.component.scss'],
   animations: [
     trigger('submenu', [
-      state('closed', style({ height: '0', overflow: 'hidden' })),
-      state('open', style({ height: '*' })),
-      transition('closed <=> open', animate('300ms ease-in-out')),
+      state('closed', style({ 
+        height: '0', 
+        opacity: 0, 
+        visibility: 'hidden', 
+      })),
+      state('open', style({ 
+        height: '*', 
+        opacity: 1, 
+        visibility: 'visible' 
+      })),
+      transition('closed => open', [
+        group([
+          animate('300ms ease-in-out', style({ height: '*', visibility: 'visible' })),
+          animate('300ms ease-in-out', style({ opacity: 1 }))
+        ])
+      ]),
+      transition('open => closed', [
+        group([
+          animate('300ms ease-in-out', style({ height: '0', visibility: 'hidden' })),
+          animate('300ms ease-in-out', style({ opacity: 0 }))
+        ])
+      ]),
     ]),
   ],
 })

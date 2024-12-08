@@ -13,43 +13,49 @@
     background-color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s;
-  
+
+    ::ng-deep .mdc-button__label {
+      display: contents;
+    }
+
+    .button-content {
+      display: flex;
+      justify-content: space-between; /* Tekst i ikona po przeciwnych stronach */
+      align-items: center; /* Wyrównanie w pionie */
+      width: 100%; /* Pełna szerokość przycisku */
+    }
+    .icon {
+      margin-left: auto; /* Automatyczny margines z lewej strony, by "docisnąć" ikonę do prawej */
+      font-size: 0.4rem; /* Rozmiar ikony */
+    }
+
     &:hover {
       background-color: #02e211dd;
       color: white;
     }
-  
-    .plus-minus-icon {
-      font-size: 0.1rem !important; /* Mniejszy rozmiar ikony */
-      color: #007bff !important;    /* Kolor niebieski */
-      margin-left: 5px; 
-    }
   }
-  
+
 
   .submenu {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Wyrównanie tekstu do lewej */
+    align-items: flex-start;
+    /* Wyrównanie tekstu do lewej */
     background: white;
     box-shadow: none;
     position: relative;
     border-radius: 4px;
-}
+  }
 
-.submenu-button {
-    text-align: left; /* Tekst wyrównany do lewej */
-    width: auto; /* Dopasowanie szerokości do zawartości */
+  .submenu-button {
+    text-align: left;
+    /* Tekst wyrównany do lewej */
+    width: auto;
+    /* Dopasowanie szerokości do zawartości */
     padding: 0.5rem 1rem;
     border: none;
     background: none;
     outline: none;
     margin: 4px;
-}
-  .menu-separator {
-    width: 1px;
-    background-color: #ccc;
-    margin: 0 10px;
-    display: inline-block;
   }
 }
