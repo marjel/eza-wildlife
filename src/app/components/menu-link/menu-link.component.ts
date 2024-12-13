@@ -22,10 +22,10 @@ import { trigger, state, style, transition, animate, group } from '@angular/anim
         visibility: 'visible' 
       })),
       transition('closed => open', [
-          animate('300ms ease-in-out', style({ height: '*', visibility: 'visible' })),
+          animate('260ms ease-in-out', style({ height: '*', visibility: 'visible' })),
       ]),
       transition('open => closed', [
-          animate('200ms ease-in-out', style({ height: '0', visibility: 'hidden' })),
+          animate('300ms ease-in-out', style({ height: '0', visibility: 'hidden' })),
       ]),
     ]),
   ],
