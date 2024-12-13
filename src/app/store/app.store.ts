@@ -1,11 +1,12 @@
 import { signalStore, withState, withMethods, patchState, withHooks } from '@ngrx/signals';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
-import { User } from '../model/user.model';
 import { inject, InjectionToken } from '@angular/core';
 import { debounceTime, distinctUntilChanged, pipe, switchMap, tap } from 'rxjs';
 import { tapResponse } from '@ngrx/operators';
-import { DataService } from '../service/app-structure/structure-data.service';
 import { MenuLink } from '@model/menu-link.model';
+import { UserType } from '@model/user-type.enum';
+import { User } from '@model/user.model';
+import { DataService } from 'app/service/app-data/data.service';
 
 type AppState = {
     user: User;
@@ -16,7 +17,8 @@ type AppState = {
 
 const initialState: AppState = {
     user: {
-        name: 'iehova'
+        name: 'iehova',
+        type: UserType.USER
     },
     isLoading: false,
     language: 'pl',

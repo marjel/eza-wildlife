@@ -8,7 +8,7 @@
       "value": "bio"
     },
     {
-      "label": "Azyl OIGO",
+      "label": "Azyl IGO",
       "value": "asylum",
       "submenu": [
         { "label": "Rebelia GOGH", "value": "asylum/rebellion" },

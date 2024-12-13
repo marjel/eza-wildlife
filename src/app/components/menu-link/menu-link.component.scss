@@ -10,9 +10,10 @@
     font-size: 15px;
     color: darkolivegreen;
     font-weight: 400;
-    background-color: #ffffff;
+    background: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    border-radius: 0px;
 
     ::ng-deep .mdc-button__label {
       display: contents;
@@ -20,42 +21,65 @@
 
     .button-content {
       display: flex;
-      justify-content: space-between; /* Tekst i ikona po przeciwnych stronach */
-      align-items: center; /* Wyrównanie w pionie */
-      width: 100%; /* Pełna szerokość przycisku */
-    }
-    .icon {
-      margin-left: auto; /* Automatyczny margines z lewej strony, by "docisnąć" ikonę do prawej */
-      font-size: 0.4rem; /* Rozmiar ikony */
+      justify-content: space-between;
+      /* Tekst i ikona po przeciwnych stronach */
+      align-items: center;
+      /* Wyrównanie w pionie */
+      width: 100%;
+      /* Pełna szerokość przycisku */
     }
 
-    &:hover {
-      background-color: #02e211dd;
+    .icon {
+      margin-left: auto;
+      /* Automatyczny margines z lewej strony, by "docisnąć" ikonę do prawej */
+      font-size: 0.6rem;
+      /* Rozmiar ikony */
+    }
+
+    &:hover, &.selected { 
+      background-color: #38c316dd;
       color: white;
     }
   }
 
 
   .submenu {
+    overflow: hidden;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     /* Wyrównanie tekstu do lewej */
-    background: white;
+    background: none;
     box-shadow: none;
     position: relative;
-    border-radius: 4px;
+    border-radius: 0px;
   }
 
   .submenu-button {
     text-align: left;
-    /* Tekst wyrównany do lewej */
-    width: auto;
-    /* Dopasowanie szerokości do zawartości */
-    padding: 0.5rem 1rem;
+    width: 100%;
+    padding: 0.5rem 0.66rem;
     border: none;
     background: none;
     outline: none;
-    margin: 4px;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: olivedrab;
+    
+    &:hover {
+      background-color: #38c316dd;
+      color: white;
+    }
+  }
+
+  .submenu-button .mat-button-wrapper {
+    text-align: left;
+    justify-content: flex-start;
+    width: 100%;
   }
 }

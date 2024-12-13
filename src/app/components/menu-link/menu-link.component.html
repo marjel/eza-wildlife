@@ -1,5 +1,5 @@
 <div class="menu-link" [class.open]="isOpen">
-  <button class="main-button" mat-button (click)="toggleSubmenu()">
+  <button class="main-button" mat-button [ngClass]="{ 'selected': activeLink() === link.value }" (click)="onLinkClicked()">
     <div class="button-content">
       {{ link.label }}
       @if (link.submenu) {
