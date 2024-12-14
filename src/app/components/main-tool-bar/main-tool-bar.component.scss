@@ -13,6 +13,27 @@
   align-items: center;
 }
 
+.language-switch {
+  height: 40px; /* Stała wysokość, dostosowana do buttonów w menu */
+  align-self: flex-start; /* Wyrównanie do góry kontenera */
+  padding: 0.5rem 1rem; /* Odstępy wewnętrzne */
+  border: none;
+  background: none;
+  outline: none;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 4px; /* Opcjonalnie, dostosowanie wyglądu */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(70, 71, 67);
+
+  &:hover {
+    background-color: #38c316dd;
+    color: white;
+  }
+}
+
 @media (orientation: landscape) {
   .menu-container {
       flex-direction: row; /* W orientacji poziomej układ horyzontalny */
