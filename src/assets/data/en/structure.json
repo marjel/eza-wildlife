@@ -1,44 +1,44 @@
 [
     {
       "label": "Articles",
-      "value": "/articles"
+      "value": "articles"
     },
     {
       "label": "Bio",
-      "value": "/bio"
+      "value": "bio"
     },
     {
       "label": "Asylum",
-      "value": "/asylum",
+      "value": "asylum",
       "submenu": [
-        { "label": "Rebellion GOGH", "value": "/asylum/rebellion" },
-        { "label": "Support", "value": "/asylum/support" },
-        { "label": "Volunteering", "value": "/asylum/volunteering" },
-        { "label": "Wards", "value": "/asylum/wards" },
-        { "label": "Virtual adoptions", "value": "/asylum/adoptions" }
+        { "label": "Rebellion GOGH", "value": "asylum/rebellion" },
+        { "label": "Support", "value": "asylum/support" },
+        { "label": "Volunteering", "value": "asylum/volunteering" },
+        { "label": "Wards", "value": "asylum/wards" },
+        { "label": "Virtual adoptions", "value": "asylum/adoptions" }
       ]
     },
     {
       "label": "Activities",
-      "value": "/activities",
+      "value": "activities",
       "submenu": [
-        { "label": "Lectures", "value": "/activities/lectures" },
-        { "label": "Trainings", "value": "/activities/trainings" },
-        { "label": "Consulting", "value": "/activities/consulting" },
-        { "label": "Interventions", "value": "/activities/interventions" }
+        { "label": "Lectures", "value": "activities/lectures" },
+        { "label": "Trainings", "value": "activities/trainings" },
+        { "label": "Consulting", "value": "activities/consulting" },
+        { "label": "Interventions", "value": "activities/interventions" }
       ]
     },
     {
       "label": "Social Media",
-      "value": "/social-media"
+      "value": "social-media"
     },
     {
       "label": "Patrons",
-      "value": "/patrons"
+      "value": "patrons"
     },
     {
       "label": "Contact",
-      "value": "/contact"
+      "value": "contact"
     }
   ]
   
