@@ -19,14 +19,7 @@ export class DataService {
   }
 
   loadApplicationStructure(lang: string): Observable<Array<MenuLink>> {
-    const response = this.loadData(lang.toLowerCase(), 'structure.json') as Observable<Array<MenuLink>>;
-    response.subscribe(
-
-      (data) => console.log('LOADAED', data)
-
-    );
-
-    return response;
+    return this.loadData(lang.toLowerCase(), 'structure.json') as Observable<Array<MenuLink>>;
   }
 
   loadHeaderData(lang: string): Observable<Array<HeaderData>> {
