@@ -1,8 +1,7 @@
 import { Component, computed, effect, HostBinding, inject, OnInit, signal } from '@angular/core';
 import { AppFacade } from '../../service/app.facade';
 import { MenuComponent } from '../menu/menu.component';
-import { CommonModule } from '@angular/common'; // Dodaj CommonModule dla dyrektyw, takich jak *ngIf
-import { MenuLink } from '@model/menu-link.model';
+import { CommonModule } from '@angular/common';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({

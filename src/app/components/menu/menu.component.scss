@@ -17,8 +17,28 @@
     position: relative;
   }
 
+  .burger-icon {
+    padding: 10px;
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burger-icon fa-icon {
+    color: #5a5a5a; /* Delikatny szary kolor */
+    font-size: 20px; /* Zmniejsz rozmiar dla subtelniejszego efektu */
+    transition: color 0.3s ease, transform 0.3s ease; /* Dodanie efektu płynnego przejścia */
+  }
+  
+  .burger-icon fa-icon:hover {
+    color: #7a7a7a; /* Jaśniejszy odcień szarości na hover */
+    transform: scale(1.1); /* Lekkie powiększenie na hover */
+  }
+
   @media (max-width: 768px) {
-    .menu-container {
+    .menu-container.open {
       display: flex;
       flex-direction: column;
       position: fixed;
@@ -27,6 +47,12 @@
       background: #fff;
       z-index: 1000;
       overflow-y: none;
+    }
+    .burger-icon {
+      display: block;
+    }
+    .menu-container {
+      display: none;
     }
     .menu-separator {
       display: none;
