@@ -1,5 +1,7 @@
 import { signalStore, withState, withMethods, patchState, withHooks } from '@ngrx/signals';
-import { inject, InjectionToken } from '@angular/core';
+import { inject, InjectionToken, effect } from '@angular/core';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { tap } from 'rxjs';
 import { MenuLink } from '@model/menu-link.model';
 import { UserType } from '@model/user-type.enum';
@@ -27,30 +29,56 @@ const APP_STATE = new InjectionToken<AppState>('AppState', {
     factory: () => initialState,
 });
 
+const destroy$ = new Subject<void>();
+
 export const AppStore = signalStore(
     withState<AppState>(() => inject(APP_STATE)),
-    withMethods((store, dataService: DataService = inject(DataService)) => ({
-        loadStructure() {
+    withMethods((store, dataService: DataService = inject(DataService)) => {
+
+        const fetchStructure = (language: string) => {
             patchState(store, { isLoading: true });
-            dataService.loadApplicationStructure(store.language()).pipe(
-                tap(
-                    (structure) => patchState(store, { structure,  })
+            return dataService
+                .loadApplicationStructure(language)
+                .pipe(
+                    tap((structure) => patchState(store, { structure, isLoading: false })),
+                    takeUntil(destroy$)
                 )
-            ).subscribe();
-        },
-        setUser(user: User) {
-            patchState(store, { user });
-        },
-        setLoading(isLoading: boolean) {
-            patchState(store, { isLoading });
-        },
-        setLanguage(language: string) {
-            patchState(store, { language });
-        },
-    })),
+                .subscribe();
+        };
+        effect(() => {
+            const currentLanguage = store.language();
+            if (currentLanguage) {
+                fetchStructure(currentLanguage);
+            }
+        });
+
+        return {
+            loadStructure() {
+                fetchStructure(store.language());
+            },
+            setUser(user: User) {
+                patchState(store, { user });
+            },
+            setLoading(isLoading: boolean) {
+                patchState(store, { isLoading });
+            },
+            setLanguage(language: string) {
+                patchState(store, { language });
+            },
+        }
+    }),
     withHooks({
-        onInit: (store) => console.log('Store initialized', store),
-        onDestroy: (store) => console.log('Store destroyed', store)
+        onInit: (store) => {
+            console.log('App Store initialized', store);
+            store.loadStructure();
+            return null;
+        },
+        onDestroy: (store) => {
+            console.log('App Store destroyed', store);
+            destroy$.next();
+            destroy$.complete();
+            return null;
+        }
     })
 );
 

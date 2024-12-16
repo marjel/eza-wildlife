@@ -16,11 +16,8 @@ export class MainToolBarComponent implements OnInit {
 
   protected appFacade = inject(AppFacade);
   protected structure = computed(() => this.appFacade.structure());
-  currentLanguage = signal<string>('EN');
 
   ngOnInit(): void {
-    this.appFacade.loadStructure();
-    this.currentLanguage.set(this.appFacade.language());
   }
 
   onLinkClicked($event: string): void {
@@ -28,9 +25,7 @@ export class MainToolBarComponent implements OnInit {
   }
 
   toggleLanguage(): void {
-    const newLanguage = this.currentLanguage() === 'EN' ? 'PL' : 'EN';
+    const newLanguage = this.appFacade.language() === 'EN' ? 'PL' : 'EN';
     this.appFacade.setLanguage(newLanguage);
-    this.appFacade.loadStructure();
-    this.currentLanguage.set(newLanguage);
   }
 }
