@@ -22,18 +22,13 @@
     .button-content {
       display: flex;
       justify-content: space-between;
-      /* Tekst i ikona po przeciwnych stronach */
       align-items: center;
-      /* Wyrównanie w pionie */
       width: 100%;
-      /* Pełna szerokość przycisku */
     }
 
     .icon {
       margin-left: auto;
-      /* Automatyczny margines z lewej strony, by "docisnąć" ikonę do prawej */
       font-size: 0.6rem;
-      /* Rozmiar ikony */
     }
 
     &:hover, &.selected { 
@@ -49,7 +44,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Wyrównanie tekstu do lewej */
     background: #fafafa;
     box-shadow: none;
     position: relative;

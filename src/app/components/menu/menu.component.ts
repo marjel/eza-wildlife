@@ -27,8 +27,4 @@ export class MenuComponent implements OnInit {
       this.activeLink.set(value);
     }
   }
-
-  trackByFn(item: MenuLink): string {
-    return item.value || item.label;
-  }
 }
