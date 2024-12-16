@@ -1,12 +1,11 @@
 import { signalStore, withState, withMethods, patchState, withHooks } from '@ngrx/signals';
 import { inject, InjectionToken, effect } from '@angular/core';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
-import { tap } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
 import { MenuLink } from '@model/menu-link.model';
 import { UserType } from '@model/user-type.enum';
 import { User } from '@model/user.model';
 import { DataService } from 'app/service/app-data/data.service';
+import { TranslateService } from '@ngx-translate/core';
 
 type AppState = {
     user: User;
@@ -29,28 +28,26 @@ const APP_STATE = new InjectionToken<AppState>('AppState', {
     factory: () => initialState,
 });
 
-const destroy$ = new Subject<void>();
-
 export const AppStore = signalStore(
     withState<AppState>(() => inject(APP_STATE)),
     withMethods((store, dataService: DataService = inject(DataService)) => {
+        const translateService = inject(TranslateService);
 
-        const fetchStructure = (language: string) => {
+        const fetchStructure = async (language: string) => {
             patchState(store, { isLoading: true });
-            return dataService
-                .loadApplicationStructure(language)
-                .pipe(
-                    tap((structure) => patchState(store, { structure, isLoading: false })),
-                    takeUntil(destroy$)
-                )
-                .subscribe();
+            try {
+                const structure = await firstValueFrom(dataService.loadApplicationStructure(language));
+                patchState(store, { structure, isLoading: false });
+            } catch (error) {
+                console.error('Failed to load structure:', error);
+                patchState(store, { isLoading: false });
+            }
         };
 
         effect(() => {
             const currentLanguage = store.language();
-            if (currentLanguage) {
-                fetchStructure(currentLanguage);
-            }
+            translateService.use(currentLanguage);
+            fetchStructure(currentLanguage);
         });
 
         return {
@@ -60,27 +57,19 @@ export const AppStore = signalStore(
             setUser(user: User) {
                 patchState(store, { user });
             },
-            setLoading(isLoading: boolean) {
-                patchState(store, { isLoading });
-            },
             setLanguage(language: string) {
                 patchState(store, { language });
-            },
+            }
         }
     }),
-    
+
     withHooks({
         onInit: (store) => {
             console.log('App Store initialized', store);
             store.loadStructure();
-            return null;
         },
-        onDestroy: (store) => {
-            console.log('App Store destroyed', store);
-            destroy$.next();
-            destroy$.complete();
-            return null;
+        onDestroy: () => {
+            console.log('App Store destroyed');
         }
     })
 );
-

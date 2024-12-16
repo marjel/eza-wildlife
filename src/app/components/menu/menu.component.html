@@ -1,6 +1,6 @@
 
 <button class="burger-icon"
-[matTooltip]="menuOpen ? 'Schowaj menu' : 'Pokaż menu'"
+[matTooltip]="menuOpen ? ('LABELS.HIDE_MENU' | translate) : ('LABELS.SHOW_MENU' | translate)"
 (click)="toggleMenu()">
     <fa-icon [icon]="menuOpen ? ICONS.faTimes : ICONS.faBars"></fa-icon>
   </button>

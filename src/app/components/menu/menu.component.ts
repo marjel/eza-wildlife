@@ -6,12 +6,13 @@ import { MenuLinkComponent } from '../menu-link/menu-link.component';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
   templateUrl: './menu.component.html',
-  imports: [CommonModule, MatButtonModule, MatTooltipModule, MenuLinkComponent, FontAwesomeModule],
+  imports: [CommonModule, MatButtonModule, MatTooltipModule, MenuLinkComponent, FontAwesomeModule, TranslateModule],
   styleUrls: ['./menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

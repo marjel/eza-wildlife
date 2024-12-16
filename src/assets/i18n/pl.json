@@ -1,7 +1,14 @@
 {
-    "actions": {
-      "save": "Zapisz",
-      "cancel": "Anuluj",
-      "edit": "Edytuj"
+    "ACTIONS": {
+      "SAVE": "Zapisz",
+      "CANCEL": "Anuluj",
+      "EDIT": "Edytuj"
+    },
+    "LABELS": {
+      "BACK_HOME": "Powrót na stronę główną",
+      "CHANGE_LANGUAGE": "Zmień język",
+      "LANGUAGE": "PL",
+      "SHOW_MENU": "Pokaż menu",
+      "HIDE_MENU": "Schowaj menu"
     }
   }

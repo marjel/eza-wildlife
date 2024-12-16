@@ -3,11 +3,12 @@ import { AppFacade } from '../../service/app.facade';
 import { MenuComponent } from '../menu/menu.component';
 import { CommonModule } from '@angular/common';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-tool-bar',
   standalone: true,
-  imports: [CommonModule, MenuComponent, MatTooltipModule], // Upewnij się, że CommonModule i MenuComponent są poprawnie zaimportowane
+  imports: [CommonModule, MenuComponent, MatTooltipModule, TranslateModule],
   providers: [AppFacade],
   templateUrl: './main-tool-bar.component.html',
   styleUrls: ['./main-tool-bar.component.scss'],
@@ -26,7 +27,7 @@ export class MainToolBarComponent implements OnInit {
   }
 
   toggleLanguage(): void {
-    const newLanguage = this.appFacade.language() === 'EN' ? 'PL' : 'EN';
-    this.appFacade.setLanguage(newLanguage);
+    const newLanguage = this.appFacade.language().toUpperCase() === 'EN' ? 'PL' : 'EN';
+    this.appFacade.setLanguage(newLanguage.toLowerCase());
   }
 }

@@ -1,3 +1,5 @@
 <header class="w-full bg-gray-100 p-4 flex justify-between items-center">
-    <img src="assets/images/logo/logo-eza.svg" alt="EZA Wildlife" class="logo">
-  </header>
+  <img src="assets/images/logo/logo-eza.svg" alt="EZA Wildlife" 
+  (click)="onLogoClick()"
+  [matTooltip]="'LABELS.BACK_HOME' | translate" class="logo">
+</header>

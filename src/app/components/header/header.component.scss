@@ -3,6 +3,7 @@
     height: auto;
     fill: #000; /* Manipulacja kolorem SVG */
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
   
     &:hover {
       transform: scale(1.1);
