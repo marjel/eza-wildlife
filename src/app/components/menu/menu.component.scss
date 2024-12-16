@@ -37,7 +37,7 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (orientation: portrait), (max-width: 860px) {
   .menu-container {
     display: flex;
     flex-direction: column;

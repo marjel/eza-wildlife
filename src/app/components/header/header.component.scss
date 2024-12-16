@@ -1,0 +1,11 @@
+.logo {
+    width: 150px;
+    height: auto;
+    fill: #000; /* Manipulacja kolorem SVG */
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.1);
+      fill: #4caf50; /* Zmiana koloru po najechaniu */
+    }
+  }
