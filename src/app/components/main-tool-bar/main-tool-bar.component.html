@@ -5,9 +5,9 @@
     </div>
     }
     <div class="flex items-center">
-        <button mat-button [matTooltip]="appFacade.language() === 'EN' ? 'Change language' : 'Zmień język'"
+        <button mat-button [matTooltip]="appFacade.language().toUpperCase() === 'EN' ? 'Change language' : 'Zmień język'"
             class="language-switch" (click)="toggleLanguage()">
-            {{ appFacade.language() === 'EN' ? 'PL' : 'EN' }}
+            {{ appFacade.language().toUpperCase() === 'EN' ? 'PL' : 'EN' }}
         </button>
     </div>
 </nav>

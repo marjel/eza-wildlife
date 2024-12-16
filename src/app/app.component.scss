@@ -1,11 +1,9 @@
 .layout-container {
     margin: 0 auto;
-    padding: 0 1rem;
-    /* Dodaje odstępy po bokach */
+    padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Minimalna wysokość to pełna wysokość ekranu */
 }
 
 .content-container {
@@ -25,17 +23,14 @@
 
 .sidebar {
     flex: 0 0 25%;
-    /* Sidebar zajmuje 25% szerokości */
     background-color: #e2f8e9;
     padding: 1rem;
 
     @media (max-width: 1024px) {
         flex: 0 0 100%;
-        /* Na małych ekranach sidebar zajmuje całą szerokość */
     }
 
     @media (max-width: 480px) {
         display: none;
-        /* Ukryj sidebar na bardzo małych ekranach */
     }
 }

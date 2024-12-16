@@ -1,4 +1,4 @@
-import { Component, computed, effect, HostBinding, inject, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, HostBinding, inject, OnInit, signal } from '@angular/core';
 import { AppFacade } from '../../service/app.facade';
 import { MenuComponent } from '../menu/menu.component';
 import { CommonModule } from '@angular/common';
@@ -11,6 +11,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   providers: [AppFacade],
   templateUrl: './main-tool-bar.component.html',
   styleUrls: ['./main-tool-bar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainToolBarComponent implements OnInit {
 

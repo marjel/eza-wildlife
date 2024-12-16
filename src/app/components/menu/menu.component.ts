@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit, signal } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { MenuLink } from '../../model/menu-link.model';
@@ -13,6 +13,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   templateUrl: './menu.component.html',
   imports: [CommonModule, MatButtonModule, MatTooltipModule, MenuLinkComponent, FontAwesomeModule],
   styleUrls: ['./menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuComponent implements OnInit {
   

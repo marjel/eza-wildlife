@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, HostListener, ElementRef, inject, Signal, signal } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener, ElementRef, inject, Signal, signal, ChangeDetectionStrategy } from '@angular/core';
 import { MenuLink } from '../../model/menu-link.model';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -29,6 +29,7 @@ import { trigger, state, style, transition, animate, group } from '@angular/anim
       ]),
     ]),
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuLinkComponent {
 

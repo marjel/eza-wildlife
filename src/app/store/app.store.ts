@@ -45,6 +45,7 @@ export const AppStore = signalStore(
                 )
                 .subscribe();
         };
+
         effect(() => {
             const currentLanguage = store.language();
             if (currentLanguage) {
@@ -67,6 +68,7 @@ export const AppStore = signalStore(
             },
         }
     }),
+    
     withHooks({
         onInit: (store) => {
             console.log('App Store initialized', store);
