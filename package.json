@@ -33,6 +33,7 @@
     "@ngrx/store-devtools": "^19.0.0-beta.0",
     "@ngx-translate/core": "^16.0.3",
     "@ngx-translate/http-loader": "^16.0.0",
+    "gsap": "^3.12.5",
     "rxjs": "~7.8.0",
     "swiper": "^11.1.15",
     "tslib": "^2.3.0",
