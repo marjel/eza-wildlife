@@ -4,7 +4,8 @@ export interface Media {
     id: string;
     type: MediaType;
     name: string;
+    description?: string;
     path?: string;
     thumbnail?: string;
     link?: string;
-} 
+}

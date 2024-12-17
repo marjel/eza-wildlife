@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #f8f8f8;
+  //background-color: #f8f8f8;
   padding: 1px 1px;
   overflow: hidden;
 }
@@ -14,8 +14,8 @@
 }
 
 .flex.items-center {
-  padding-top: 8px; /* Odstęp od góry */
-  padding-right: 8px; /* Opcjonalnie odstęp od prawej */
+  padding-top: 8px;
+  padding-right: 8px;
 }
 
 

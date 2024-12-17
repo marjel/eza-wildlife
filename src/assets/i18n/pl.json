@@ -2,13 +2,21 @@
     "ACTIONS": {
       "SAVE": "Zapisz",
       "CANCEL": "Anuluj",
-      "EDIT": "Edytuj"
+      "EDIT": "Edytuj",
+      "CALL": "Zadzwoń do mnie",
+      "EMAIL": "Napisz do mnie maila"
+    },
+    "SOCIAL": {
+      "FACEBOOK": "Obserwuj mnie na Facebooku",
+      "INSTAGRAM": "Obserwuj mój Instagram",
+      "YOUTUBE": "Zobacz moje filmy na YouTube"
     },
     "LABELS": {
       "BACK_HOME": "Powrót na stronę główną",
       "CHANGE_LANGUAGE": "Zmień język",
       "LANGUAGE": "PL",
       "SHOW_MENU": "Pokaż menu",
-      "HIDE_MENU": "Schowaj menu"
+      "HIDE_MENU": "Schowaj menu",
+      "COPYRIGHTS": "Wszystkie prawa zastrzeżone"
     }
   }

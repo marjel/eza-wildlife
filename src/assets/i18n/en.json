@@ -2,13 +2,21 @@
   "ACTIONS": {
     "SAVE": "Save",
     "CANCEL": "Cancel",
-    "EDIT": "Edit"
+    "EDIT": "Edit",
+    "CALL": "Call me",
+    "EMAIL": "Send me an email"
+  },
+  "SOCIAL": {
+    "FACEBOOK": "Follow my profile on Facebook",
+    "INSTAGRAM": "Follow my Instagram",
+    "YOUTUBE": "Watch my videos on YouTube"
   },
   "LABELS": {
     "BACK_HOME": "Back home page",
     "CHANGE_LANGUAGE": "Change language",
     "LANGUAGE": "EN",
     "SHOW_MENU": "Show menu",
-    "HIDE_MENU": "Hide menu"
+    "HIDE_MENU": "Hide menu",
+    "COPYRIGHTS": "All rights reserved"
   }
 }
