@@ -1,12 +1,49 @@
-.logo {
-    width: 150px;
-    height: auto;
-    fill: #000; /* Manipulacja kolorem SVG */
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
+// .logo {
+//     width: 150px;
+//     height: auto;
+//     fill: #000; /* Manipulacja kolorem SVG */
+//     transition: transform 0.3s ease-in-out;
+//     cursor: pointer;
   
-    &:hover {
-      transform: scale(1.1);
-      fill: #4caf50; /* Zmiana koloru po najechaniu */
+//     &:hover {
+//       transform: scale(1.1);
+//       fill: #4caf50; /* Zmiana koloru po najechaniu */
+//     }
+//   }
+
+  header {
+    display: flex;
+    height: 16rem; // Wysokość headera
+    .logo {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 10;
+        height: 14rem;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+          fill: #4caf50; /* Zmiana koloru po najechaniu */
+        }
+      }
+    .w-52 {
+      width: 200px; // Szerokość obszaru dla logo
+      background-color: #f3f4f6; // Szary odcień tła
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    swiper-container {
+      flex: 1; // Pozostała przestrzeń dla slideshow
+      width: 100%;
+      height: 100%;
+    }
+  
+    swiper-slide img {
+      @apply w-full h-full object-cover; // Dostosowanie obrazów
     }
   }
+  
+  

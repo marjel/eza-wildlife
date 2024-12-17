@@ -13,7 +13,7 @@ export class DataService {
 
   private http: HttpClient = inject(HttpClient);
 
-  loadData(lang: string, path: string): Observable<Array<MenuLink | HeaderData>> {
+  loadData(lang: string, path: string): Observable<Array<MenuLink>> | Observable<HeaderData> {
     const uri = `${DataService.BASE_URL}/${lang}/${path}`;
     return this.http.get<any>(uri);
   }
@@ -22,8 +22,8 @@ export class DataService {
     return this.loadData(lang.toLowerCase(), 'structure.json') as Observable<Array<MenuLink>>;
   }
 
-  loadHeaderData(lang: string): Observable<Array<HeaderData>> {
-    return this.loadData(lang, 'header.json') as Observable<Array<HeaderData>>;
+  loadHeaderData(lang: string): Observable<HeaderData> {
+    return this.loadData(lang, 'header.json') as Observable<HeaderData>;
   }
 
 }

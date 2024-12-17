@@ -1,5 +1,43 @@
-<header class="w-full bg-gray-100 p-4 flex justify-between items-center">
-  <img src="assets/images/logo/logo-eza.svg" alt="EZA Wildlife" 
-  (click)="onLogoClick()"
-  [matTooltip]="'LABELS.BACK_HOME' | translate" class="logo">
+<header class="flex w-full h-64">
+  <!-- Logo Section -->
+  <div class="w-52 bg-gray-100 flex items-center justify-center z-10">
+    <img 
+      src="assets/images/logo/logo-eza.svg" 
+      alt="EZA Wildlife" 
+      (click)="onLogoClick()" 
+      [matTooltip]="'LABELS.BACK_HOME' | translate" 
+      class="h-40 cursor-pointer"
+    />
+  </div>
+
+  <!-- Slideshow Section -->
+  <div class="flex-1 relative overflow-hidden">
+    <swiper-container 
+      class="w-full h-full" 
+      autoplay="true" 
+      loop="true" 
+      navigation="true" 
+      pagination="true" 
+      slides-per-view="1"
+    >
+    <swiper-slide>
+      <img 
+        src="assets/images/header/the_tiger.jpg" 
+        alt="Slide 1" 
+        class="w-full h-full object-cover object-center" />
+    </swiper-slide>
+    <swiper-slide>
+      <img 
+        src="assets/images/header/the_vegans.jpg" 
+        alt="Slide 2" 
+        class="w-full h-full object-cover object-center" />
+    </swiper-slide>
+    <swiper-slide>
+      <img 
+        src="assets/images/header/tigers.jpg" 
+        alt="Slide 3" 
+        class="w-full h-full object-cover object-center" />
+    </swiper-slide>
+    </swiper-container>
+  </div>
 </header>
