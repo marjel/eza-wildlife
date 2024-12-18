@@ -1,5 +1,5 @@
 import { Component, Renderer2, inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,12 +14,24 @@ import {
   faEyeSlash, 
   faRedo 
 } from '@fortawesome/free-solid-svg-icons';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-accessibility-tools',
   templateUrl: './accessibility-tools.component.html',
   styleUrls: ['./accessibility-tools.component.scss'],
-  imports: [MatSidenavModule, MatButtonModule, MatIconModule, FontAwesomeModule]
+  imports: [CommonModule, MatSidenavModule, MatButtonModule, MatIconModule, FontAwesomeModule],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('300ms ease-out', style({ transform: 'translateX(0)' })),
+      ]),
+      transition(':leave', [
+        animate('300ms ease-in', style({ transform: 'translateX(-100%)' })),
+      ]),
+    ]),
+  ],
 })
 export class AccessibilityToolsComponent {
 

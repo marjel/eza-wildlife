@@ -1,16 +1,18 @@
 <!-- Przycisk FAB z ikoną Font Awesome -->
 <div class="fixed bottom-0 left-0 z-50">
-  <button 
-    mat-fab 
-    class="!bg-orange-500 hover:!bg-green-600 text-white transition-colors duration-300"
-    (click)="togglePanel()">
-    <fa-icon [icon]="ICONS.universalAccess"></fa-icon>
-  </button>
-</div>
+    <button
+      mat-fab
+      class="!bg-orange-500 hover:!bg-green-600 text-white transition-colors duration-300"
+      (click)="togglePanel()"
+    >
+      <fa-icon [icon]="ICONS.universalAccess"></fa-icon>
+    </button>
+  </div>
   
-  <!-- Panel boczny -->
+  <!-- Panel boczny z animacją -->
   <div
-    [class.hidden]="!isPanelVisible"
+    *ngIf="isPanelVisible"
+    @slideInOut
     class="fixed top-0 left-0 h-full w-64 bg-gray-100 shadow-lg z-40 transform transition-transform duration-300"
   >
     <div class="p-4">
