@@ -14,36 +14,48 @@
         height: 100%;
         background-color: #ffffff;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         z-index: 99999;
+        font-family: 'Roboto', sans-serif;
       }
-
+    
       #preloader .spinner {
         width: 4rem;
         height: 4rem;
         border: 0.5rem solid #e2e8f0;
-        border-top-color: #10b981;
+        border-top-color: #66cc1d;
         border-radius: 50%;
         animation: spin 1s linear infinite;
       }
-
+    
+      #preloader .loading-text {
+        margin-top: 1rem; /* Dodaje odstęp między spinnerem a tekstem */
+        color: #6b7280; /* Szary kolor */
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+      }
+    
       @keyframes spin {
         to {
           transform: rotate(360deg);
         }
       }
-
+    
       /* Ukrycie Angulara do czasu załadowania */
       body:not(.loaded) app-root {
         display: none;
       }
     </style>
+    
   </head>
   <body>
     <!-- Preloader -->
     <div id="preloader">
       <div class="spinner"></div>
+      <div class="loading-text">Ładowanie Eza Wildlife</div>
     </div>
 
     <!-- Angular Aplikacja -->
