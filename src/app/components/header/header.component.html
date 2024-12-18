@@ -8,17 +8,13 @@
   <!-- Slideshow Section -->
   <div class="slideshow-container relative overflow-hidden">
     <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" speed="100"
-      css-mode="true" class="w-full h-full" autoplay="false" loop="true" navigation="true" pagination="true"
+      css-mode="true" class="w-full h-full" autoplay="false" loop="false" navigation="true" pagination="true"
       slides-per-view="1">
+      @for (item of media(); track item.id) {
       <swiper-slide>
-        <img src="assets/images/header/the_tiger.jpg" alt="Slide 1" class="w-full h-full object-cover object-center" />
+        <img [src]="item.path" [alt]="item.name" class="w-full h-full object-cover object-center" />
       </swiper-slide>
-      <swiper-slide>
-        <img src="assets/images/header/the_vegans.jpg" alt="Slide 2" class="w-full h-full object-cover object-center" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="assets/images/header/tigers.jpg" alt="Slide 3" class="w-full h-full object-cover object-center" />
-      </swiper-slide>
+      }
     </swiper-container>
   </div>
 </header>

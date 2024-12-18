@@ -1,50 +1,52 @@
-[
-    {
-        "id": "0",
-        "type": "IMG",
-        "name": "Tygrys",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "path": "assets/images/header/the_tiger.jpg",
-        "thumbnail": ""    
-    },
-    {
-        "id": "1",
-        "type": "IMG",
-        "name": "Wykład",
-        "description": "Coaching on the couch.",
-        "path": "assets/images/header/coaching_on_the_couch.jpg",
-        "thumbnail": ""    
-    },
-    {
-        "id": "2",
-        "type": "IMG",
-        "name": "Na scenie",
-        "description": "Sed sollicitudin hendrerit molestie.",
-        "path": "assets/images/header/on_the_stage.jpg",
-        "thumbnail": ""    
-    },
-    {
-        "id": "3",
-        "type": "IMG",
-        "name": "Weganie",
-        "description": "Etiam pulvinar eros vitae velit condimentum.",
-        "path": "assets/images/header/the_vegans.jpg",
-        "thumbnail": ""    
-    },
-    {
-        "id": "4",
-        "type": "IMG",
-        "name": "Tygrysy",
-        "description": "Cras ut erat non leo eleifend ultrices.",
-        "path": "assets/images/header/tigers.jpg",
-        "thumbnail": ""    
-    },
-    {
-        "id": "5",
-        "type": "IMG",
-        "name": "Cisna",
-        "description": "Praesent molestie arcu et ultricies euismod.",
-        "path": "assets/images/header/with_the_litte_bear.jpg",
-        "thumbnail": ""    
-    }
-]    
+{
+    "media" : [
+        {
+            "id": "0",
+            "type": "IMG",
+            "name": "Tygrys",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "path": "assets/images/header/the_tiger.jpg",
+            "thumbnail": ""
+        },
+        {
+            "id": "1",
+            "type": "IMG",
+            "name": "Wykład",
+            "description": "Coaching on the couch.",
+            "path": "assets/images/header/coaching_on_the_couch.jpg",
+            "thumbnail": ""
+        },
+        {
+            "id": "2",
+            "type": "IMG",
+            "name": "Na scenie",
+            "description": "Sed sollicitudin hendrerit molestie.",
+            "path": "assets/images/header/on_the_stage.jpg",
+            "thumbnail": ""
+        },
+        {
+            "id": "3",
+            "type": "IMG",
+            "name": "Weganie",
+            "description": "Etiam pulvinar eros vitae velit condimentum.",
+            "path": "assets/images/header/the_vegans.jpg",
+            "thumbnail": ""
+        },
+        {
+            "id": "4",
+            "type": "IMG",
+            "name": "Tygrysy",
+            "description": "Cras ut erat non leo eleifend ultrices.",
+            "path": "assets/images/header/tigers.jpg",
+            "thumbnail": ""
+        },
+        {
+            "id": "5",
+            "type": "IMG",
+            "name": "Cisna",
+            "description": "Praesent molestie arcu et ultricies euismod.",
+            "path": "assets/images/header/with_the_litte_bear.jpg",
+            "thumbnail": ""
+        }
+    ]
+}

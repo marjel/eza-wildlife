@@ -1,25 +1,30 @@
-import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, computed, CUSTOM_ELEMENTS_SCHEMA, effect, inject, ViewEncapsulation } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule } from '@ngx-translate/core';
+import { AppFacade } from 'app/service/app.facade';
 
 import { register } from 'swiper/element/bundle';
 
 
 @Component({
   selector: 'app-header',
-  standalone: true, 
+  standalone: true,
   imports: [MatTooltipModule, TranslateModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class HeaderComponent  implements AfterViewInit {
+export class HeaderComponent implements AfterViewInit {
+
+  protected appFacade = inject(AppFacade);
+  protected media = computed(() => this.appFacade.headerData().media);
 
   ngAfterViewInit() {
-     const swiperEl = document.querySelector('swiper-container');
 
-     const params = {
+    const swiperEl = document.querySelector('swiper-container');
+
+    const params = {
       injectStyles: [`
       .swiper-pagination-bullet {
         width: 20px;
@@ -34,6 +39,7 @@ export class HeaderComponent  implements AfterViewInit {
       .swiper-pagination-bullet-active {
         color: #fff;
         background: #ff7a00;
+        font-family: 'Roboto'
       }
       `],
       pagination: {
@@ -44,12 +50,9 @@ export class HeaderComponent  implements AfterViewInit {
       },
     }
 
-    
-
-    if(swiperEl) {
+    if (swiperEl) {
       Object.assign(swiperEl, params)
     }
-  
 
     register();
   }
