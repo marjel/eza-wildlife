@@ -45,3 +45,6 @@ html {
     }
 }
 
+.high-contrast {
+    @apply filter contrast-200 bg-black text-yellow-300;
+}

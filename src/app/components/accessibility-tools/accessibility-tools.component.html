@@ -1,0 +1,49 @@
+<!-- Przycisk FAB z ikoną Font Awesome -->
+<div class="fixed top-1/4 left-0 z-50">
+  <button 
+    mat-fab 
+    class="!bg-orange-500 hover:!bg-green-600 text-white transition-colors duration-300"
+    (click)="togglePanel()">
+    <fa-icon [icon]="ICONS.universalAccess"></fa-icon>
+  </button>
+</div>
+  
+  <!-- Panel boczny -->
+  <div
+    [class.hidden]="!isPanelVisible"
+    class="fixed top-0 left-0 h-full w-64 bg-gray-100 shadow-lg z-40 transform transition-transform duration-300"
+  >
+    <div class="p-4">
+      <h3 class="font-bold mb-4 text-lg">Narzędzia ułatwień dostępu</h3>
+      <ul class="space-y-2">
+        <li>
+          <button mat-button class="w-full" (click)="increaseTextSize()">
+            <fa-icon [icon]="ICONS.textHeight"></fa-icon> Zwiększ tekst
+          </button>
+        </li>
+        <li>
+          <button mat-button class="w-full" (click)="decreaseTextSize()">
+            <fa-icon [icon]="ICONS.textHeight"></fa-icon> Zmniejsz tekst
+          </button>
+        </li>
+        <li>
+          <button mat-button class="w-full" (click)="toggleGrayscale()">
+            <fa-icon [icon]="grayscaleEnabled ? ICONS.toggleOn : ICONS.toggleOff"></fa-icon>
+            Skala szarości
+          </button>
+        </li>
+        <li>
+          <button mat-button class="w-full" (click)="toggleHighContrast()">
+            <fa-icon [icon]="highContrastEnabled ? ICONS.eye : ICONS.eyeSlash"></fa-icon>
+            Wysoki kontrast
+          </button>
+        </li>
+        <li>
+          <button mat-button class="w-full" (click)="reset()">
+            <fa-icon [icon]="ICONS.redo"></fa-icon> Reset
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
