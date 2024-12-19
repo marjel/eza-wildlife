@@ -1,8 +1,8 @@
 <!-- Przycisk FAB z ikoną Font Awesome -->
 <div class="fixed bottom-0 left-0 z-50">
     <button
-      mat-fab
-      class="!bg-orange-500 hover:!bg-green-600 text-white transition-colors duration-300"
+    mat-mini-fab
+      class="!bg-orange-500 hover:!bg-lime-600 text-white transition-colors duration-300 m-2"
       (click)="togglePanel()"
     >
       <fa-icon [icon]="ICONS.universalAccess"></fa-icon>
@@ -16,33 +16,46 @@
     class="fixed top-0 left-0 h-full w-64 bg-gray-100 shadow-lg z-40 transform transition-transform duration-300"
   >
     <div class="p-4">
-      <h3 class="font-bold mb-4 text-lg">Narzędzia ułatwień dostępu</h3>
-      <ul class="space-y-2">
+      <h3 class="mb-4 text-lg">Narzędzia ułatwień dostępu</h3>
+      <ul class="space-y-0.5">
         <li>
-          <button mat-button class="w-full" (click)="increaseTextSize()">
-            <fa-icon [icon]="ICONS.textHeight"></fa-icon> Zwiększ tekst
+          <button mat-button class="button w-full" (click)="increaseTextSize()">
+            <div class="button-content">
+                {{ 'Zwiększ tekst' }}
+                <fa-icon class="icon" [icon]="ICONS.textHeight"></fa-icon>
+              </div>
           </button>
         </li>
         <li>
-          <button mat-button class="w-full" (click)="decreaseTextSize()">
-            <fa-icon [icon]="ICONS.textHeight"></fa-icon> Zmniejsz tekst
+          <button mat-button class="button w-full" (click)="decreaseTextSize()">
+            <div class="button-content">
+                {{ 'Zmniejsz tekst' }}
+                <fa-icon class="icon" [icon]="ICONS.textHeight"></fa-icon>
+              </div>
           </button>
         </li>
         <li>
-          <button mat-button class="w-full" (click)="toggleGrayscale()">
-            <fa-icon [icon]="grayscaleEnabled ? ICONS.toggleOn : ICONS.toggleOff"></fa-icon>
-            Skala szarości
+          <button mat-button class="button w-full" (click)="toggleGrayscale()">
+            <div class="button-content">
+                {{ 'Skala szarości' }}
+                <fa-icon class="icon" [icon]="grayscaleEnabled ? ICONS.toggleOn : ICONS.toggleOff"></fa-icon>
+              </div>
           </button>
         </li>
         <li>
-          <button mat-button class="w-full" (click)="toggleHighContrast()">
-            <fa-icon [icon]="highContrastEnabled ? ICONS.eye : ICONS.eyeSlash"></fa-icon>
-            Wysoki kontrast
+          <button mat-button class="button w-full" (click)="toggleHighContrast()">
+            <div class="button-content">
+                {{ 'Wysoki kontrast' }}
+                <fa-icon class="icon" [icon]="highContrastEnabled ? ICONS.eye : ICONS.eyeSlash"></fa-icon>
+              </div>
           </button>
         </li>
         <li>
-          <button mat-button class="w-full" (click)="reset()">
-            <fa-icon [icon]="ICONS.redo"></fa-icon> Reset
+          <button mat-button class="button w-full" (click)="reset()">
+            <div class="button-content">
+                {{ 'Resetuj' }}
+                <fa-icon class="icon" [icon]="ICONS.redo"></fa-icon>
+              </div>
           </button>
         </li>
       </ul>
