@@ -1,22 +1,33 @@
 {
-    "ACTIONS": {
-      "SAVE": "Zapisz",
-      "CANCEL": "Anuluj",
-      "EDIT": "Edytuj",
-      "CALL": "Zadzwoń do mnie",
-      "EMAIL": "Napisz do mnie maila"
-    },
-    "SOCIAL": {
-      "FACEBOOK": "Obserwuj mnie na Facebooku",
-      "INSTAGRAM": "Obserwuj mój Instagram",
-      "YOUTUBE": "Zobacz moje filmy na YouTube"
-    },
-    "LABELS": {
-      "BACK_HOME": "Powrót na stronę główną",
-      "CHANGE_LANGUAGE": "Zmień język",
-      "LANGUAGE": "PL",
-      "SHOW_MENU": "Pokaż menu",
-      "HIDE_MENU": "Schowaj menu",
-      "COPYRIGHTS": "Wszystkie prawa zastrzeżone"
-    }
+  "ACTIONS": {
+    "SAVE": "Zapisz",
+    "CANCEL": "Anuluj",
+    "EDIT": "Edytuj",
+    "CALL": "Zadzwoń do mnie",
+    "EMAIL": "Napisz do mnie maila",
+    "ACCEPT": "Potwierdź",
+    "DECLINE": "Odrzuć",
+    "INCREASE_TEXT": "Zwiększ tekst",
+    "DECREASE_TEXT": "Zmniejsz tekst",
+    "GRAYSCALE": "Skala szarości",
+    "HIGH_CONTRAST": "Wysoki kontrast",
+    "RESET": "Przywróć domyślne"
+  },
+  "SOCIAL": {
+    "FACEBOOK": "Obserwuj mnie na Facebooku",
+    "INSTAGRAM": "Obserwuj mój Instagram",
+    "YOUTUBE": "Zobacz moje filmy na YouTube"
+  },
+  "LABELS": {
+    "BACK_HOME": "Powrót na stronę główną",
+    "CHANGE_LANGUAGE": "Zmień język",
+    "LANGUAGE": "PL",
+    "SHOW_MENU": "Pokaż menu",
+    "HIDE_MENU": "Schowaj menu",
+    "COPYRIGHTS": "Wszystkie prawa zastrzeżone",
+    "ACCESSIBILITY_TOOLS": "Narzędzia ułatwień dostępu"
+  },
+  "DESCRIPTIONS": {
+    "COOKIES": "Ta strona używa plików cookie. Kontynuując korzystanie z naszej strony, zgadzasz się na używanie przez nas plików cookie. Możesz w każdej chwili zrezygnować z ich używania."
   }
+}

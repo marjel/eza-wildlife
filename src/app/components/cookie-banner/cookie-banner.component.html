@@ -1,0 +1,14 @@
+<div *ngIf="!cookieConsentGiven"
+    class="cookie-banner bg-gray-500 bg-opacity-70 text-white flex flex-col sm:flex-row items-center justify-between p-4 shadow-lg">
+    <p class="text-sm sm:text-base">
+        {{ 'DESCRIPTIONS.COOKIES' | translate }}
+    </p>
+    <div class="mt-4 sm:mt-0 flex space-x-4">
+        <button mat-raised-button color="primary" (click)="acceptCookies()" class="px-4 py-2">
+            {{ 'ACTIONS.ACCEPT' | translate }}
+        </button>
+        <button mat-raised-button color="warn" (click)="declineCookies()" class="px-4 py-2">
+            {{ 'ACTIONS.DECLINE' | translate }}
+        </button>
+    </div>
+</div>

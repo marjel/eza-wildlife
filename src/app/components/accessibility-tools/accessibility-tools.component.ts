@@ -4,6 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { 
   faUniversalAccess, 
@@ -20,7 +21,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
   selector: 'app-accessibility-tools',
   templateUrl: './accessibility-tools.component.html',
   styleUrls: ['./accessibility-tools.component.scss'],
-  imports: [CommonModule, MatSidenavModule, MatButtonModule, MatIconModule, FontAwesomeModule],
+  imports: [CommonModule, MatSidenavModule, MatButtonModule, MatIconModule, FontAwesomeModule, TranslateModule],
   animations: [
     trigger('slideInOut', [
       transition(':enter', [

@@ -4,7 +4,14 @@
     "CANCEL": "Cancel",
     "EDIT": "Edit",
     "CALL": "Call me",
-    "EMAIL": "Send me an email"
+    "EMAIL": "Send me an email",
+    "ACCEPT": "Accept",
+    "DECLINE": "Decline",
+    "INCREASE_TEXT": "Increase text",
+    "DECREASE_TEXT": "Decrease text",
+    "GRAYSCALE": "Grayscale",
+    "HIGH_CONTRAST": "High contrast",
+    "RESET": "Reset"
   },
   "SOCIAL": {
     "FACEBOOK": "Follow my profile on Facebook",
@@ -18,5 +25,8 @@
     "SHOW_MENU": "Show menu",
     "HIDE_MENU": "Hide menu",
     "COPYRIGHTS": "All rights reserved"
+  },
+  "DESCRIPTIONS": {
+    "COOKIES": "This website uses cookies to enhance your experience. By continuing to use our website, you agree to our use of cookies. You can opt out at any time."
   }
 }
