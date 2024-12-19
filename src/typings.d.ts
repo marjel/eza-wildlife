@@ -4,3 +4,4 @@ declare namespace JSX {
       'swiper-slide': any;
     }
   }
+  declare var gtag: Function;
