@@ -2,6 +2,7 @@
   "ACTIONS": {
     "SAVE": "Zapisz",
     "CANCEL": "Anuluj",
+    "CLOSE": "Zamknij",
     "EDIT": "Edytuj",
     "CALL": "Zadzwoń do mnie",
     "EMAIL": "Napisz do mnie maila",
@@ -25,7 +26,9 @@
     "SHOW_MENU": "Pokaż menu",
     "HIDE_MENU": "Schowaj menu",
     "COPYRIGHTS": "Wszystkie prawa zastrzeżone",
-    "ACCESSIBILITY_TOOLS": "Narzędzia ułatwień dostępu"
+    "ACCESSIBILITY_TOOLS": "Narzędzia ułatwień dostępu",
+    "OPEN_ACCESSIBILITY_TOOLS": "Otwórz panel ułatwień dostępu",
+    "CLOSE_ACCESSIBILITY_TOOLS": "Zamknij panel ułatwień dostępu"
   },
   "DESCRIPTIONS": {
     "COOKIES": "Ta strona używa plików cookie. Kontynuując korzystanie z naszej strony, zgadzasz się na używanie przez nas plików cookie. Możesz w każdej chwili zrezygnować z ich używania."

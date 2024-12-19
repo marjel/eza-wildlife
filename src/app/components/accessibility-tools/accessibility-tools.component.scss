@@ -1,34 +1,79 @@
+@use '../../../styles/variables' as vars;
+
 .button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  color: rgba(119, 121, 116, 0.547);
+  font-weight: 400;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 0px;
+
+  ::ng-deep .mdc-button__label {
+    display: contents;
+  }
+
+  .button-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding: 10px;
-    font-size: 15px;
-    color: rgba(119, 121, 116, 0.547);
-    font-weight: 400;
-    background: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 0px;
-
-    ::ng-deep .mdc-button__label {
-      display: contents;
-    }
-
-    .button-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-
-    .icon {
-      margin-left: auto;
-      font-size: 0.8rem;
-    }
-
-    &:hover, &.selected { 
-      background-color: #38c316dd;
-      color: white;
-    }
   }
+
+  .icon {
+    margin-left: auto;
+    font-size: 0.8rem;
+  }
+
+  &:hover,
+  &.selected {
+    background-color: #38c316dd;
+    color: white;
+  }
+}
+
+.custom-button {
+  font-family: vars.$button-font-family;
+  color: vars.$button-text-color !important;
+  transition: vars.$button-transition;
+  border-radius: 0px;
+
+  &.decline-button {
+    background-color: vars.$button-decline-bg;
+  }
+
+  &.decline-button:hover {
+    background-color: vars.$button-decline-hover-bg;
+  }
+}
+
+hr {
+  border-color: #e5e5e5;
+  margin: 8px;
+}
+
+.fixed {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-40 {
+  z-index: 40;
+}
+

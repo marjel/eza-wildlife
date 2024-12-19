@@ -1,64 +1,66 @@
-<!-- Przycisk FAB z ikoną Font Awesome -->
 <div class="fixed bottom-0 left-0 z-50">
     <button
-    mat-mini-fab
-      class="!bg-orange-500 hover:!bg-lime-600 text-white transition-colors duration-300 m-2"
-      (click)="togglePanel()"
-    >
-      <fa-icon [icon]="ICONS.universalAccess"></fa-icon>
+        [matTooltip]="isPanelVisible ? ('LABELS.CLOSE_ACCESSIBILITY_TOOLS' | translate) : ('LABELS.OPEN_ACCESSIBILITY_TOOLS' | translate)"
+        mat-mini-fab
+        class="!bg-orange-500 hover:!bg-lime-600 text-white transition-colors duration-300 m-2" 
+        (click)="togglePanel()">
+        <fa-icon [icon]="ICONS.universalAccess"></fa-icon>
     </button>
-  </div>
-  
-  <!-- Panel boczny z animacją -->
-  <div
-    *ngIf="isPanelVisible"
-    @slideInOut
-    class="fixed top-0 left-0 h-full w-64 bg-gray-100 shadow-lg z-40 transform transition-transform duration-300"
-  >
-    <div class="p-4">
-      <h3 class="mb-4 text-lg">Narzędzia ułatwień dostępu</h3>
-      <ul class="space-y-0.5">
-        <li>
-          <button mat-button class="button w-full" (click)="increaseTextSize()">
-            <div class="button-content">
-                {{ 'Zwiększ tekst' }}
-                <fa-icon class="icon" [icon]="ICONS.textHeight"></fa-icon>
-              </div>
-          </button>
-        </li>
-        <li>
-          <button mat-button class="button w-full" (click)="decreaseTextSize()">
-            <div class="button-content">
-                {{ 'Zmniejsz tekst' }}
-                <fa-icon class="icon" [icon]="ICONS.textHeight"></fa-icon>
-              </div>
-          </button>
-        </li>
-        <li>
-          <button mat-button class="button w-full" (click)="toggleGrayscale()">
-            <div class="button-content">
-                {{ 'Skala szarości' }}
-                <fa-icon class="icon" [icon]="grayscaleEnabled ? ICONS.toggleOn : ICONS.toggleOff"></fa-icon>
-              </div>
-          </button>
-        </li>
-        <li>
-          <button mat-button class="button w-full" (click)="toggleHighContrast()">
-            <div class="button-content">
-                {{ 'Wysoki kontrast' }}
-                <fa-icon class="icon" [icon]="highContrastEnabled ? ICONS.eye : ICONS.eyeSlash"></fa-icon>
-              </div>
-          </button>
-        </li>
-        <li>
-          <button mat-button class="button w-full" (click)="reset()">
-            <div class="button-content">
-                {{ 'Resetuj' }}
-                <fa-icon class="icon" [icon]="ICONS.redo"></fa-icon>
-              </div>
-          </button>
-        </li>
-      </ul>
+</div>
+
+<div *ngIf="isPanelVisible" @slideInOut class="fixed top-0 left-0 h-full w-64 bg-gray-100 shadow-lg z-40 flex flex-col">
+    <div class="p-4 flex-grow">
+        <h3 class="mb-4 text-lg">{{ 'LABELS.ACCESSIBILITY_TOOLS' | translate }}</h3>
+        <ul class="space-y-0.5">
+            <li>
+                <button mat-button class="button w-full" (click)="increaseTextSize()">
+                    <div class="button-content">
+                        {{ 'ACTIONS.INCREASE_TEXT' | translate }}
+                        <fa-icon class="icon" [icon]="ICONS.textHeight"></fa-icon>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button mat-button class="button w-full" (click)="decreaseTextSize()">
+                    <div class="button-content">
+                        {{ 'ACTIONS.DECREASE_TEXT' | translate }}
+                        <fa-icon class="icon" [icon]="ICONS.textHeight"></fa-icon>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button mat-button class="button w-full" (click)="toggleGrayscale()">
+                    <div class="button-content">
+                        {{ 'ACTIONS.GRAYSCALE' | translate }}
+                        <fa-icon class="icon" [icon]="grayscaleEnabled ? ICONS.toggleOn : ICONS.toggleOff"></fa-icon>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button mat-button class="button w-full" (click)="toggleHighContrast()">
+                    <div class="button-content">
+                        {{ 'ACTIONS.HIGH_CONTRAST' | translate }}
+                        <fa-icon class="icon" [icon]="highContrastEnabled ? ICONS.eye : ICONS.eyeSlash"></fa-icon>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button mat-button class="button w-full" (click)="reset()">
+                    <div class="button-content">
+                        {{ 'ACTIONS.RESET' | translate }}
+                        <fa-icon class="icon" [icon]="ICONS.redo"></fa-icon>
+                    </div>
+                </button>
+            </li>
+        </ul>
     </div>
-  </div>
-  
+
+    <div class="mt-auto">
+        <hr class="border-t border-gray-300 my-4" />
+        <div class="flex justify-end px-4 pb-4">
+            <button mat-flat-button class="custom-button decline-button border-r-0" (click)="togglePanel()">
+                {{ 'ACTIONS.CLOSE' | translate }}
+            </button>
+        </div>
+    </div>
+</div>

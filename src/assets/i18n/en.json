@@ -2,6 +2,7 @@
   "ACTIONS": {
     "SAVE": "Save",
     "CANCEL": "Cancel",
+    "CLOSE": "Close",
     "EDIT": "Edit",
     "CALL": "Call me",
     "EMAIL": "Send me an email",
@@ -24,7 +25,10 @@
     "LANGUAGE": "EN",
     "SHOW_MENU": "Show menu",
     "HIDE_MENU": "Hide menu",
-    "COPYRIGHTS": "All rights reserved"
+    "COPYRIGHTS": "All rights reserved",
+    "ACCESSIBILITY_TOOLS": "Accessibility tools",
+    "OPEN_ACCESSIBILITY_TOOLS": "Open accessibility tools",
+    "CLOSE_ACCESSIBILITY_TOOLS": "Close accessibility tools"
   },
   "DESCRIPTIONS": {
     "COOKIES": "This website uses cookies to enhance your experience. By continuing to use our website, you agree to our use of cookies. You can opt out at any time."

@@ -12,6 +12,7 @@
   font-family: vars.$button-font-family;
   color: vars.$button-text-color !important;
   transition: vars.$button-transition;
+  border-radius: 0px;
 
   &.accept-button {
     background-color: vars.$button-accept-bg;
