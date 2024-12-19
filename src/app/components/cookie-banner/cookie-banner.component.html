@@ -3,11 +3,15 @@
     <p class="text-sm sm:text-base">
         {{ 'DESCRIPTIONS.COOKIES' | translate }}
     </p>
-    <div class="mt-4 sm:mt-0 flex space-x-4">
-        <button mat-raised-button color="primary" (click)="acceptCookies()" class="px-4 py-2">
+    <div class="mt-4 sm:mt-0 flex space-x-2 ml-2">
+        <button mat-flat-button 
+                class="custom-button accept-button" 
+                (click)="acceptCookies()">
             {{ 'ACTIONS.ACCEPT' | translate }}
         </button>
-        <button mat-raised-button color="warn" (click)="declineCookies()" class="px-4 py-2">
+        <button mat-flat-button 
+                class="custom-button decline-button" 
+                (click)="declineCookies()">
             {{ 'ACTIONS.DECLINE' | translate }}
         </button>
     </div>

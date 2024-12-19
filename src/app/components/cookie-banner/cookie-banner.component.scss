@@ -1,8 +1,33 @@
+@use '../../../styles/variables' as vars;
+
 .cookie-banner {
-    z-index: 10000;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  z-index: 10000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.custom-button {
+  font-family: vars.$button-font-family;
+  color: vars.$button-text-color !important;
+  transition: vars.$button-transition;
+
+  &.accept-button {
+    background-color: vars.$button-accept-bg;
   }
-  
+
+  &.accept-button:hover {
+    background-color: vars.$button-accept-hover-bg;
+    color: vars.$button-text-color !important;
+  }
+
+  &.decline-button {
+    background-color: vars.$button-decline-bg;
+  }
+
+  &.decline-button:hover {
+    background-color: vars.$button-decline-hover-bg;
+    color: vars.$button-text-color !important;
+  }
+}

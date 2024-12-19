@@ -1,0 +1,11 @@
+$power-green: #38c316dd;
+$power-orange: #f97316;
+
+$button-accept-bg: $power-green;
+$button-accept-hover-bg: $power-orange;
+$button-decline-bg: red;
+$button-decline-hover-bg:  $power-orange;
+
+$button-text-color: #ffffff;
+$button-transition: background-color 0.3s ease, color 0.3s ease;
+$button-font-family: 'Roboto', sans-serif;

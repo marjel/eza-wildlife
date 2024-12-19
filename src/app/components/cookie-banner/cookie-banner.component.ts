@@ -20,11 +20,11 @@ export class CookieBannerComponent {
   acceptCookies() {
     localStorage.setItem('cookieConsent', 'true');
     this.cookieConsentGiven = true;
-    window.location.reload();
+    // window.location.reload(); TODO
   }
 
   declineCookies() {
     localStorage.setItem('cookieConsent', 'false');
-    this.cookieConsentGiven = false;
+    this.cookieConsentGiven = true;
   }
 }
