@@ -1,10 +1,12 @@
 .header {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: stretch;
     height: 18rem;
 
     .logo-container {
+        z-index: 30;
         object-fit: contain; /* Prevents cropping */
         width: 100%;
         height: 100%;
@@ -19,9 +21,17 @@
         }
     }
 
+    .absolute {
+        z-index: 50; // Animowany tekst nad slideshow
+        color: #fff; // Kontrastujący kolor tekstu
+        font-size: 2rem; // Rozmiar czcionki dla lepszej widoczności
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); // Ładny efekt cienia
+      }
+
     .slideshow-container {
         flex-grow: 1;
         height: 100%;
+        z-index: 10;
     }
 }
 

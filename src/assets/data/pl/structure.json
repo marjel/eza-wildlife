@@ -33,7 +33,7 @@
       "label": "Media",
       "value": "social-media",
       "submenu": [
-        { "label": "Patroni", "value": "social-media/patrons" },
+        { "label": "Mecenat", "value": "social-media/patrons" },
         { "label": "Gdzie jesteśmy", "value": "social-media/media" },
         { "label": "Galeria", "value": "social-media/gallery" }
       ]
