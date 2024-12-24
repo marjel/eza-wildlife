@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SplitTextService } from './split-text.service';
+import { TextAnimationService } from './text-animation.service';
 
-describe('SplitTextService', () => {
-  let service: SplitTextService;
+describe('TextAnimationService', () => {
+  let service: TextAnimationService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SplitTextService);
+    service = TestBed.inject(TextAnimationService);
   });
 
   it('should be created', () => {
